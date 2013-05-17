@@ -1,0 +1,34 @@
+ 	$(document).ready(function(){
+ 		  $("#pivot1").jPivot(
+ 				  {
+ 						fields: {
+ 								   Id : { field: 'id', sort: "asc", agregateType: "none"},
+ 						           Gender : { field: 'gender', sort: "asc", showAll:true, agregateType: "distinct"},
+ 						           Age : { field: 'age', sort: "asc", age: "Age", showAll:true, agregateType: "distinct"},
+ 						           Eyes: { field: 'eyes', sort: "asc", showAll:false, agregateType: "distinct"},
+ 						           Count: { agregateType: "count", groupType:"none" },
+ 						           Sum: { field: 'v', agregateType: "sum", groupType:"none" },
+ 						           Average: { field: 'v', agregateType: "average", groupType:"none"}
+ 				  		},
+ 						xfields: [ "Gender","Eyes" ],
+ 						yfields: [ "Age" ],
+ 						zfields: [ "Count"],
+ 						data: [
+ 			           		{id:1 ,gender:"male", age:"30-40",eyes:"green", v:8},
+ 			           		{id:2 ,gender:"male", age:"20-30",eyes:"brown", v:7},
+ 			           		{id:3 ,gender:"male", age:"30-40",eyes:"brown", v:3},
+ 			           		{id:4 ,gender:"female", age:"40-50",eyes:"brown", v:5},
+ 			           		{id:5 ,gender:"male", age:"30-40",eyes:"green", v:7},
+ 			           		{id:6 ,gender:"male", age:"30-40",eyes:"green", v:9},
+ 			           		{id:7 ,gender:"female", age:"40-50",eyes:"green", v:8},
+ 			           		{id:8 ,gender:"female", age:"50-60",eyes:"brown", v:6},
+ 			           		{id:9 ,gender:"male", age:"30-40",eyes:"brown", v:9},
+ 			           		{id:10 ,gender:"male", age:"40-50",eyes:"blue", v:7},
+ 			           		{id:11 ,gender:"male", age:"30-40",eyes:"blue", v:4},
+ 			           		{id:12 ,gender:"male", age:"20-30",eyes:"black", v:2}
+ 			        	],
+ 			        	copyright: true,
+ 			        	summary: true
+ 				}	  
+ 		  );
+	});
