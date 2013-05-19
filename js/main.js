@@ -1,5 +1,5 @@
  	$(document).ready(function(){
- 		  $("#pivot1").jPivot(
+ 		  $("#pivot1").jbPivot(
  				  {
  						fields: {
  								   Id : { field: 'id', sort: "asc", agregateType: "none"},
